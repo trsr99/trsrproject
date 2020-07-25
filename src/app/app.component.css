@@ -1,0 +1,39 @@
+.title {
+  font-family: sans-serif;
+  font-size: 18px;
+  color: rgb(17, 11, 8);
+}
+
+h2.title1 {
+ font-family: sans-serif;
+ font-size: 18px;
+ color: rgb(17, 11, 8);
+}
+
+a:link, a:visited {
+ background-color: #030007;
+ color: white;
+ padding: 10px 25px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+}
+a:hover, a:active {
+ background-color: #BD9696;
+}
+
+#box {
+  height: 20px;
+}
+
+#lfloat {
+  position: absolute;
+  left: 10px;
+  top: 50px;
+}
+
+#rfloat {
+  position: absolute;
+  right: 10px;
+  top: 50px;
+}

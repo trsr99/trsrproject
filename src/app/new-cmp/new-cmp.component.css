@@ -1,0 +1,16 @@
+p.newcmpp1 {
+ color: blue;
+ font-size: 18px;
+}
+
+p.newcmpp2 {
+ color: rgb(255, 0, 0);
+ font-size: 18px;
+}
+
+div {
+  border-style: solid;
+  border-color: pink;
+  background-color: pink;
+  width: 250px;
+}

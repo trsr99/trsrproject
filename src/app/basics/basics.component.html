@@ -1,0 +1,45 @@
+<p>
+	Welcome to Angular Basics Practice...!
+</p>
+
+<div> Months :
+	<select (change) = "changemonths($event)">
+ <option *ngFor = "let i of months">{{i}}</option>
+</select>
+</div>
+<br/>
+
+<div>
+	Condition testing with IF only...<br/>
+	<span class = 's1' *ngIf="isavailable">Condition is valid.</span>
+	<br/><br/>
+
+  Condition testing with IF ELSE only...<br/>
+	<span class = 's1' *ngIf="isavailable; else condition11">Condition is valid.</span>
+	<ng-template #condition11><span class = 's2'>Condition is invalid</span></ng-template>
+	<br/><br/>
+
+  Condition testing with IF THEN ELSE only...<br/>
+	<span class = 's1' *ngIf="isavailable; then condition21 else condition22">Condition is
+valid.</span>
+	<ng-template #condition21><span class = 's1'>Condition is valid</span></ng-template>
+	<ng-template #condition22><span class = 's2'>Condition is invalid</span></ng-template>
+	<br/>
+</div>
+	<br/>
+
+	<button (click)="myClickFunction($event)">
+Click Me
+</button>
+	<br/>
+
+	<div style="text-align:center">
+		<span changeText >Welcome to TRSR.</span>
+	</div>
+
+	<h1>Custom Pipe</h1>
+	<b>Square root of 25 is: {{25 | sqrt}}</b>
+	<br/>
+
+Services Date : {{todaydate | date:'dd/MM/yyyy'}}<br/>
+Service Text : {{serviceproperty}}

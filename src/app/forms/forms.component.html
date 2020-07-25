@@ -1,0 +1,10 @@
+<b>Login</b>
+<form #data="ngForm" style="border:2px solid skyblue;border-radius: 4px;background-color:skyblue;">
+	Name<br/>
+	<input type = "text" name = "emailid" placeholder = "emailid" [(ngModel)]="emailid" #emailid="ngModel" required><br/>
+	Password<br/>
+	<input type = "password" name = "passwd" placeholder = "passwd" [(ngModel)]="passwd"><br/>
+	<button (click)="myClickFunction(data)">Reset</button>
+	<button (click)="onAutoFill()">Fill</button>
+	<button (click)="onClickSubmit(data.value)">Submit</button>
+</form>
