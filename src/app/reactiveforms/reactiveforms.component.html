@@ -1,0 +1,34 @@
+<b>Login Reactive forms</b>
+<form [formGroup]="formdata" style="border:2px solid skyblue;border-radius: 4px;background-color:skyblue;"
+	(ngSubmit)="onClickSubmitr(formdata.value)">
+	Name<br/>
+	<input type="text" class="fortextbox" name="emailid" placeholder="emailid" formControlName="emailid">
+	<div class="validation-errors">
+		<ng-container *ngFor="let validation of form_messages.emailid">
+			<div class="error_message"
+				*ngIf="formdata.get('emailid').hasError(validation.type) && (formdata.get('emailid').dirty || formdata.get('emailid').touched)">
+				{{validation.message}}
+			</div>
+		</ng-container>
+	</div><br/>
+	Password<br/>
+	<input type="password" class="fortextbox" name="passwd"
+ placeholder="passwd" formControlName="passwd">
+	<div class="validation-errors">
+		<ng-container *ngFor="let validation of form_messages.passwd">
+			<div class="error_message"
+				*ngIf="formdata.get('passwd').hasError(validation.type) && (formdata.get('passwd').dirty || formdata.get('passwd').touched)">
+				{{validation.message}}
+			</div>
+		</ng-container>
+	</div>
+	<div
+		*ngIf="passwordvalidation(formdata.get('passwd')) && (formdata.get('passwd').dirty || formdata.get('passwd').touched)">
+		Password should be greater than 4 characters.
+	</div>
+	<br/>
+	<button (click)="myClickFunction(formdata)">Reset</button>
+	<button (click)="onAutoFill()">Fill</button>
+	<input type = "submit" [disabled] = "!formdata.valid" class = "forsubmit"
+ value = "Log In">
+</form>

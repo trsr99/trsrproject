@@ -12,6 +12,7 @@ import { BasicsComponent } from './basics/basics.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FormsComponent } from './forms/forms.component';
 import { MyserviceService } from './myservice.service';
+import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MyserviceService } from './myservice.service';
     HomeComponent,
     BasicsComponent,
     PagenotfoundComponent,
-    FormsComponent
+    FormsComponent,
+    ReactiveformsComponent
   ],
   imports: [
     BrowserModule,
